@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="id.desa.muktisari" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget 
+	id="id.desa.muktisari" 
+	version="1.0.0" 
+	xmlns="http://www.w3.org/ns/widgets" 
+	xmlns:gap="http://phonegap.com/ns/1.0">
+	
     <name>Berita Muktisari</name>
     <description>
         Kabar terkini dari Desa Muktisari, Kec. Gandrungmangu, Cilacap Barat, Jawa Tengah.
@@ -7,6 +12,14 @@
     <author email="mail@samsul.web.id" href="http://muktisarigdm.desa.id">
         Samsul Ma'arif
     </author>
+    
+	<gap:platforms>
+		<gap:platform name="android" minVersion="2.2" />
+		<gap:platform name="webos" />
+		<gap:platform name="symbian.wrt" />
+		<gap:platform name="blackberry" project="widgets" />
+	</gap:platforms>
+    
     <preference name="permissions" 					value="none" />
     <preference name="phonegap-version" 			value="3.5.0" />
     <preference name="orientation" 					value="default" />
@@ -15,7 +28,6 @@
     <preference name="webviewbounce" 				value="true" />
     <preference name="prerendered-icon" 			value="true" />
     <preference name="stay-in-webview" 				value="true" />
-    <preference name="ios-statusbarstyle" 			value="black-opaque" />
     <preference name="detect-data-types" 			value="true" />
     <preference name="exit-on-suspend" 				value="false" />
     <preference name="show-splash-screen-spinner" 	value="true" />
@@ -23,8 +35,9 @@
     <preference name="disable-cursor" 				value="false" />
     <preference name="android-minSdkVersion" 		value="7" />
     <preference name="android-installLocation" 		value="auto" />
-    <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
+    <preference name="SplashScreen" 				value="screen" />
+	<preference name="SplashScreenDelay" 			value="10000" />
+	
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-motion" />
@@ -37,7 +50,9 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="nl.madebymark.share" version="0.1.1" />
-    <icon src="www/icon.png" />
+    
+    <icon src="res/icon/android/icon-36-ldpi.png" gap:role="default" />
+    
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
@@ -49,6 +64,7 @@
     <icon gap:platform="ios" height="114" src="www/res/icon/ios/icon-57-2x.png" width="114" />
     <icon gap:platform="ios" height="144" src="www/res/icon/ios/icon-72-2x.png" width="144" />
     <icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
+    
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
