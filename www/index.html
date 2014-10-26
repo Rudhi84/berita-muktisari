@@ -28,14 +28,11 @@
         <link href="assets/style.css" rel="stylesheet" media="screen">
         <link href="assets/apprise/apprise.min.css" rel="stylesheet" />
 
-        <link href="assets/bootstrap/bootstrap.simplex.min.css" rel="stylesheet" media="screen" title="main">
+        <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen" title="main">
         <link href="assets/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="assets/font-awesome/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet" />
-        <link href="assets/other/jquery.zrssfeed.css" rel="stylesheet" />
         
         <script type="text/javascript" src="assets/other/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/other/bootstrap-tabdrop.min.js"></script>
         
         <script type="text/javascript" src="assets/apprise/apprise.min.js"></script>
         
@@ -43,12 +40,9 @@
         <script type="text/javascript" src="assets/ln.js"></script>
         <script type="text/javascript" src="assets/app.js"></script>
         <script type="text/javascript" src="js/jquery.zrssfeed.min.js"></script>
-        <script type="text/javascript" src="js/jquery.zframework.js"></script>
 		<script type="text/javascript" src="js/SocialSharing.js"></script>
 
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/bootstrap-slider/modernizr.min.js"></script>
-        <script type="text/javascript" src="assets/bootstrap-slider/bootstrap-slider.min.js"></script>
 
 		<script type="text/javascript">
 			$(document).ready(function () {
@@ -58,8 +52,6 @@
 					date: false,
 					content: true,
 					limit: 7
-				}, function(e) {
-					$.zazar.rotate({selector: '#feedmuktisari ul'});
 				});
 			});
 		</script>
@@ -84,10 +76,11 @@
 						<li><a href="#" onclick="window.open('http://mobile.twitter.com/desa_muktisari', '_self', 'location=yes');"><div class="icon-twitter"></div> @desa_muktisari</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="http://fb.com/DesakuMuktisari"><div class="icon-facebook-sign"></div> Facebook Muktisari</a></li>
+						<li><a href="#" onclick="app.openUrl('http://fb.com/desamuktisari.gdm')"><div class="icon-facebook-sign"></div> Muktisari Gandrung</a></li>
 					  </ul>
 					  <ul class="nav pull-right">
 						<li class="divider-vertical"></li>
-						<li><a href="#" onclick="window.plugins.socialsharing.share('Berita dari Pelosok Desa', null, null, 'http://muktisarigdm.desa.id')"><div class="icon-share"></div> Share</a></li>
+						<li><a href="#" onclick="window.plugins.socialsharing.share('Berita dari Pelosok Desa', null, 'http://muktisarigdm.desa.id', 'via @desa_muktisari')"><div class="icon-share"></div> Share</a></li>
 						<li class="divider"></li>
 						<li><a href="#"><div class="icon-info"></div> Tentang</a></li>
 					  </ul>
@@ -98,7 +91,7 @@
 			
 
         <div class="app">
-            <h1>Berita Muktisari</h1>
+            <h2>Berita Muktisari</h2>
             <div id="feedmuktisari">
             </div>
         </div>
