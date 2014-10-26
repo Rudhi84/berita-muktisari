@@ -28,10 +28,11 @@
         <link href="assets/style.css" rel="stylesheet" media="screen">
         <link href="assets/apprise/apprise.min.css" rel="stylesheet" />
 
-        <link href="assets/bootstrap/bootstrap.cyborg.min.css" rel="stylesheet" media="screen" title="main">
+        <link href="assets/bootstrap/bootstrap.simplex.min.css" rel="stylesheet" media="screen" title="main">
         <link href="assets/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="assets/font-awesome/font-awesome.min.css" rel="stylesheet">
         <link href="assets/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet" />
+        <link href="assets/other/jquery.zrssfeed.css" rel="stylesheet" />
         
         <script type="text/javascript" src="assets/other/jquery.min.js"></script>
         <script type="text/javascript" src="assets/other/bootstrap-tabdrop.min.js"></script>
@@ -43,6 +44,7 @@
         <script type="text/javascript" src="assets/app.js"></script>
         <script type="text/javascript" src="js/jquery.zrssfeed.min.js"></script>
         <script type="text/javascript" src="js/jquery.zframework.js"></script>
+		<script type="text/javascript" src="js/SocialSharing.js"></script>
 
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap-slider/modernizr.min.js"></script>
@@ -74,22 +76,18 @@
 					  <span class="icon-bar"></span>
 					  <span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="#">Berita Muktisari</a>
+					<a class="brand" href="index.html">Berita Muktisari</a>
 					<div class="nav-collapse">
 					  <ul class="nav">
-						<li><a href="#" onclick="window.open('http://muktisarigdm.desa.id', '_blank', 'location=yes');">Home</a></li>
+						<li><a href="#" onclick="window.open('http://muktisarigdm.desa.id', '_blank', 'location=yes');"><div class="icon-home"></div> Portal Berita</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="#" onclick="window.open('http://mobile.twitter.com/desa_muktisari', '_self', 'location=yes');"><div class="icon-twitter"></div> @desa_muktisari</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="http://fb.com/DesakuMuktisari"><div class="icon-facebook-sign"></div> Facebook Muktisari</a></li>
 					  </ul>
-					  <form class="navbar-search pull-left" action="">
-						<input type="text" class="search-query span2" placeholder="Search">
-					  </form>
 					  <ul class="nav pull-right">
 						<li class="divider-vertical"></li>
-						<li><a href="#" onclick="navigator.share('Portal Desa Muktisari','http://muktisarigdm.desa.id','plain/text')"><div class="icon-share"></div> Share</a></li>
-						<li><a href="#">Kontak</a></li>
+						<li><a href="#" onclick="window.plugins.socialsharing.share('Berita dari Pelosok Desa', null, null, 'http://muktisarigdm.desa.id')"><div class="icon-share"></div> Share</a></li>
 						<li class="divider"></li>
 						<li><a href="#"><div class="icon-info"></div> Tentang</a></li>
 					  </ul>
