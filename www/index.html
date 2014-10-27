@@ -51,18 +51,7 @@
 
             function exitFromApp()
              {
-                if(exitFromApp() return false) {
-
-                    if(app.modalDialogDisplayed) return false;
-            
-                    apprise("<strong>Yakin mau keluar?</strong><br /><br />Anda akan keluar dari aplikasi ini.", {'textOk':'Iya'; 'textCancel':'Tidak'}, function()
-                    {
-                        app.modalDialogDisplayed = false;
-                    });
-                    return false;
-                } else {
-                    navigator.app.exitApp()
-                }
+                    navigator.app.exitApp();
              }
 
         	$(document).ready(function () {
