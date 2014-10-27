@@ -47,18 +47,8 @@
 
             function exitFromApp()
              {
-                    navigator.notification.confirm(
-                        'Anda akan keluar dari aplikasi!', // message
-                         onConfirm,            // callback to invoke with index of button pressed
-                        'Yakin?',           // title
-                        ['Tidak','Ya']     // buttonLabels
-                    );
+                navigator.app.exitApp();
              }
-
-            function onConfirm(buttonIndex) {
-                    navigator.app.exitApp();
-            }
-
 
         	$(document).ready(function () {
 				$('#feedMuktisari').rssfeed('http://muktisarigdm.desa.id/feed/', {
@@ -88,6 +78,10 @@
 
         .event.received {
             display:none;
+        }
+
+        .centerer {
+            text-align: center;
         }
         </style>
         
@@ -127,9 +121,10 @@
 			
 
         <div class="app">
-            <h2>Desa Muktisari</h2>
+            <h2 class="centerer">Desa Muktisari</h2>
+            <p class="centerer"><small>Kec. Gandrungmangu, Cilacap Barat, Jawa Tengah.</small></p>
             <div id="deviceready">
-            <div class="event listening" style="text-align: center;"><i class="icon-refresh icon-spin"></i></div>
+            <div class="centerer event listening"><i class="icon-refresh icon-spin"></i></div>
             <div id="feedMuktisari" class="event received"></div>
             </div>
             <div id="tentang">
@@ -146,7 +141,7 @@
         
     <div class="footer">
       <div class="container">
-        <p class="text-muted">&copy; Desa Muktisari | 2014.</p>
+        <p class="text-muted centerer">&copy; Desa Muktisari | 2014.</p>
       </div>
     </div>
 
