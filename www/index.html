@@ -36,16 +36,37 @@
         <script type="text/javascript" src="assets/apprise/apprise.min.js"></script>
         
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="assets/ln.js"></script>
-        <script type="text/javascript" src="assets/app.js"></script>
         <script type="text/javascript" src="js/jquery.zrssfeed.min.js"></script>
 		<script type="text/javascript" src="js/SocialSharing.js"></script>
+		<script type="text/javascript" src="js/pageslider.js"></script>
 
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
 
-		<script type="text/javascript">
-			$(document).ready(function () {
-				$('#feedmuktisari').rssfeed('http://muktisarigdm.desa.id/feed/', {
+		<script type="text/javascript" charset="utf-8">
+		    function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+                  navigator.splashscreen.show();
+            }
+
+            function exitFromApp()
+             {
+                if(exitFromApp() return false) {
+
+                    if(app.modalDialogDisplayed) return false;
+            
+                    apprise("<strong>Yakin mau keluar?</strong><br /><br />Anda akan keluar dari aplikasi ini.", {'textOk':'Iya'; 'textCancel':'Tidak'}, function()
+                    {
+                        app.modalDialogDisplayed = false;
+                    });
+                    return false;
+                } else {
+                    navigator.app.exitApp()
+                }
+             }
+
+        	$(document).ready(function () {
+				$('#feedMuktisari').rssfeed('http://muktisarigdm.desa.id/feed/', {
 					header: false,
 					titletag: 'div',
 					date: false,
@@ -54,10 +75,16 @@
 				});
 			});
 		</script>
+
+        <style type="text/css">
+        #tentang {
+            display: none;
+        }
+        </style>
         
         <title>Berita dari Pelosok Desa</title>
     </head>
-    <body>
+    <body onload="onLoad();">
 		<div class="container-fluid">
 			  <div class="navbar navbar-inverse navbar-fixed-top">
 				<div class="navbar-inner">
@@ -81,6 +108,8 @@
 						<li><a href="#" onclick="window.plugins.socialsharing.share('Berita dari Pelosok Desa', 'via @desa_muktisari', null, 'http://muktisarigdm.desa.id')"><div class="icon-share"></div> Share</a></li>
 						<li class="divider"></li>
 						<li><a href="#"><div class="icon-info"></div> Tentang</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" onclick="exitFromApp();"><div class="icon-time"></div> Keluar</a></li>                        
 					  </ul>
 					</div><!-- /.nav-collapse -->
 				  </div>
@@ -90,7 +119,11 @@
 
         <div class="app">
             <h2>Desa Muktisari</h2>
-            <div id="feedmuktisari">
+            <div id="feedMuktisari">
+            </div>
+            <div id="tentang">
+				<h2>Desa Muktisari</h2>
+                <p>Desa Muktisari, Kecamatan Gandrungmangu, Kabupaten Cilacap.</p>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
