@@ -56,11 +56,7 @@
              }
 
             function onConfirm(buttonIndex) {
-                if (buttonIndex = 1) {
-                    return false;
-                } else {
                     navigator.app.exitApp();
-                }
             }
 
 
@@ -83,19 +79,14 @@
         .event {
             border-radius:4px;
             -webkit-border-radius:4px;
-            color:#FFFFFF;
-            font-size:12px;
-            margin:0px 30px;
-            padding:2px 0px;
+            font-size:21px;
         }
 
         .event.listening {
-            background-color:#333333;
             display:block;
         }
 
         .event.received {
-            background-color:#4B946A;
             display:none;
         }
         </style>
@@ -138,7 +129,7 @@
         <div class="app">
             <h2>Desa Muktisari</h2>
             <div id="deviceready">
-            <div class="event listening"><i class="icon-refresh icon-spin"></i></div>
+            <div class="event listening" style="text-align: center;"><i class="icon-refresh icon-spin"></i></div>
             <div id="feedMuktisari" class="event received"></div>
             </div>
             <div id="tentang">
