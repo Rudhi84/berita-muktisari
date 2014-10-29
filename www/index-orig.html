@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen" title="main">
+        <link href="assets/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="assets/font-awesome/font-awesome.min.css" rel="stylesheet">
+        
+        <script type="text/javascript" src="assets/other/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.zrssfeed.min.js"></script>
+		<script type="text/javascript" src="js/SocialSharing.js"></script>
+		<script type="text/javascript" src="js/pageslider.js"></script>
+
+        <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+		    function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+                  navigator.splashscreen.show();
+            }
+
+            function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
+
+        	$(document).ready(function () {
+				$('#feedMuktisari').rssfeed('http://muktisarigdm.desa.id/feed/', {
+					header: false,
+					titletag: 'div',
+					date: false,
+					content: true,
+					limit: 7
+				});
+			});
+
+
+		</script>
+
+        <style type="text/css">
+        #tentang {
+            display: none;
+        }
+
+        .event {
+            border-radius:4px;
+            -webkit-border-radius:4px;
+            font-size:21px;
+        }
+
+        .event.listening {
+            display:block;
+        }
+
+        .event.received {
+            display:block;
+        }
+
+        .centerer {
+            text-align: center;
+        }
+        </style>
+        
+        <title>Berita dari Pelosok Desa</title>
+    </head>
+    <body onload="onLoad();">
+		<div class="container-fluid">
+			  <div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-inner">
+				  <div class="container" style="width: auto;">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="index.html"><img src="img/favicon.png"> Berita Muktisari</a>
+					<div class="nav-collapse">
+					  <ul class="nav">
+						<li><a href="#" onclick="window.open('http://muktisarigdm.desa.id', '_self', 'location=yes');"><div class="icon-home"></div> Portal Berita</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="#" onclick="window.open('https://mobile.twitter.com/desa_muktisari', '_self', 'location=yes');"><div class="icon-twitter"></div> @desa_muktisari</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="http://fb.com/DesakuMuktisari"><div class="icon-facebook-sign"></div> Facebook Muktisari</a></li>
+					  </ul>
+					  <ul class="nav pull-right">
+						<li class="divider-vertical"></li>
+						<li><a href="#" onclick="window.plugins.socialsharing.share('Berita dari Pelosok Desa', 'via @desa_muktisari', null, 'http://muktisarigdm.desa.id')"><div class="icon-share"></div> Share</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><div class="icon-info"></div> Tentang</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" onclick="exitFromApp();"><div class="icon-signout"></div> Keluar</a></li>                        
+					  </ul>
+					</div><!-- /.nav-collapse -->
+				  </div>
+				</div><!-- /navbar-inner -->
+			  </div><!-- /navbar -->
+			
+
+        <div class="app">
+            <h2 class="centerer">Desa Muktisari</h2>
+            <p class="centerer"><small>Kec. Gandrungmangu, Cilacap Barat, Jawa Tengah.</small></p>
+            <div id="deviceready">
+            <div class="centerer event listening"><i class="icon-refresh icon-spin"></i></div>
+            <div id="feedMuktisari" class="event received"></div>
+            </div>
+            <div id="tentang">
+				<h2>Desa Muktisari</h2>
+                <p>Desa Muktisari, Kecamatan Gandrungmangu, Kabupaten Cilacap.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        </div> <!-- container fluid -->
+        
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted centerer">&copy; Desa Muktisari | 2014.</p>
+      </div>
+    </div>
+
+    </body>
+</html>
