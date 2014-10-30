@@ -8,7 +8,7 @@
 
 // global settings
 window.androidPrefsLib = "jpHoloSharedPreferences";
-window.loadingAnimation = '<div class="loading"><div class="outer"></div><div class="inner"></div></div>';
+// window.loadingAnimation = '<div class="loading"><div class="outer"></div><div class="inner"></div></div>';
 
 // device ready
 document.addEventListener("deviceready", onDeviceReady, false);
