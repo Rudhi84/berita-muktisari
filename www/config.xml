@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
-	id="id.desa.muktisari" 
-	version="1.2.1" 
+	id="id.desa.muktisari-test" 
+	version="1.2.2" 
 	xmlns="http://www.w3.org/ns/widgets" 
 	xmlns:gap="http://phonegap.com/ns/1.0">
 
@@ -13,7 +13,7 @@
         Samsul Ma'arif
     </author>
 
-    <content src="main.html" />
+    <content src="index.html" />
 
 	<gap:platforms>
 		<gap:platform name="android" minVersion="2.2" />
